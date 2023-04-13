@@ -32,11 +32,11 @@ class iplogicSaleQuickOrder extends \CBitrixComponent
 		$this->errorCollection = new ErrorCollection();
 
 		if( !Loader::includeModule('sale') ) {
-			$this->errorCollection[] = new Error('No sale module');
+			$this->setError('No sale module');
 		};
 
 		if( !Loader::includeModule('catalog') ) {
-			$this->errorCollection[] = new Error('No catalog module');
+			$this->setError('No catalog module');
 		};
 
 		$this->siteId = \Bitrix\Main\Context::getCurrent()->getSite();
