@@ -372,6 +372,11 @@ class iplogicSaleQuickOrder extends \CBitrixComponent
 		);
 	}
 
+
+	/**
+	 * Setting error.
+	 * @return boolean
+	 */
 	protected function setError($str, $code = 0)
 	{
 		$error = new \Bitrix\Main\Error($str, $code, "");
